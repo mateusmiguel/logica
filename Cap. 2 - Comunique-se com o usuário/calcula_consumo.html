@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+<h3>Alcool ou Gasolina?</h3>
+
+<script>
+    var tanque = 40;
+    var caminhoComGasolina = 480;
+    var caminhoComAlcool = 300;
+    var consumoDeGasolina = caminhoComGasolina / tanque;
+    var consumoDeAlcool = caminhoComAlcool / tanque;
+
+    var precoDaGasolina = 2.90;
+    var precoDoAlcool = 2.40;
+
+    var precoKmAlcool = precoDoAlcool / consumoDeAlcool;
+    var precoKmGasolina = precoDaGasolina / consumoDeGasolina;
+
+    document.write("O carro faz " + consumoDeGasolina + " Km/L com gasolina e " + consumoDeAlcool + "Km/L com álcool.<br>A gasolina tem o melhor preço do por KM, custando R$ " + precoKmGasolina.toFixed(2) + ", contra R$" + precoKmAlcool.toFixed(2) + " do álcool.");
+
+    document.write("<hr>");
+
+</script>
