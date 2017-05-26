@@ -1,32 +1,27 @@
 <meta charset="UTF-8">
 <script>
-    // IMC
-    // Índice de Massa Corporal, o IMC, é um indicador do grau de obesidade de uma
-    // pessoa. Pode ser uma primeira forma de ter um sinal de que alguém está muito
-    // gordo ou muito magro. A fórmula do IMC é simples: peso dividido pelo quadrado
-    // da altura.
-
     var pulaLinha = function () {
         document.write("<br>");
     };
-
-    //Recebe um parâmetro
     var mostra = function (frase) {
         document.write(frase);
         pulaLinha();
     };
 
-    //variavel de imc
-    var calculaIMC = function(altura, peso) {
-        var imc = peso / (altura * altura);
-        return imc;
-    }
+    
 
-    var peso = 75;
-    var altura = 1.72;
-    var resultadoIMC = calculaIMC(altura, peso);
-    mostra("O IMC é " + resultadoIMC);
-    mostra("Ele ainda está " + (resultadoIMC - 18.5) + " pontos acima do limite da magreza.");
+
+    // //variavel de imc
+    // var calculaIMC = function(altura, peso) {
+    //     var imc = peso / (altura * altura);
+    //     return imc;
+    // }
+
+    // var peso = 75;
+    // var altura = 1.72;
+    // var resultadoIMC = calculaIMC(altura, peso);
+    // mostra("O IMC é " + resultadoIMC);
+    // mostra("Ele ainda está " + (resultadoIMC - 18.5) + " pontos acima do limite da magreza.");
 
 
 </script>
