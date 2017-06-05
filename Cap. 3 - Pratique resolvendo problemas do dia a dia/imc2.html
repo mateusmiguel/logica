@@ -8,20 +8,20 @@
         pulaLinha();
     };
 
-    
+    var calculaIMC = function(altura, peso) {
+        var imc = peso / (altura * altura);
+        return imc;
+    }
 
+    var peso = 65;
+    var altura = 1.71;
+    var imc = Math.round(calculaIMC(altura, peso));
 
-    // //variavel de imc
-    // var calculaIMC = function(altura, peso) {
-    //     var imc = peso / (altura * altura);
-    //     return imc;
-    // }
+    mostra("Meu imc é " + imc);
+    mostra(" Estou " + (imc - 18.5) + " pontos acima do limite da magreza.");
+    mostra("Estou " + (35 - imc) + " pontos abaixo da obesidade morbida.");
 
-    // var peso = 75;
-    // var altura = 1.72;
-    // var resultadoIMC = calculaIMC(altura, peso);
-    // mostra("O IMC é " + resultadoIMC);
-    // mostra("Ele ainda está " + (resultadoIMC - 18.5) + " pontos acima do limite da magreza.");
-
+    // Exemplo de cálculo dentro da function, sem declarar uma nova variável. 
+    // mostra("Meu imc é " + calculaIMC(altura, peso));
 
 </script>
