@@ -1,0 +1,19 @@
+<meta charset="UTF-8">
+<script>
+    var idade = prompt("Quantos anos você tem?");
+
+    // Declarar funções sem variáveis para não ocupar memória.
+    function calculaDiasDeVida(idade) {
+        return idade * 365;
+    }
+
+    function calculaBatimentos(dias) {
+        return dias * 24 * 60 * 80;
+    }
+    
+    var dias = calculaDiasDeVida(idade);
+    var batimentos = calculaBatimentos(calculaDiasDeVida(idade)); //Desafio
+
+    document.write("<h1>Você já viveu " + dias + " dias! </h1>");
+    document.write("e seu coração já bateu " + batimentos + " vezes. Haja coração!");
+</script>
