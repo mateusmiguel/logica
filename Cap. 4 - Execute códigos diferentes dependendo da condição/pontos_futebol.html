@@ -1,0 +1,17 @@
+<meta charset="UTF-8">
+<script>
+    var pulaLinha = function () {
+        document.write("<br>");
+    };
+    var mostra = function (frase) {
+        document.write(frase);
+        pulaLinha();
+    };
+
+    var vitorias = prompt("Quantos jogos o CDC Futebol Clube venceu?");
+    var empates  = prompt("Quantos jogos o CDC Futebol Clube empatou?");
+    //parseInt(); para 'converter' string em número.
+    var pontos = (vitorias * 3) + parseInt(empates);
+    
+    mostra("Nosso time tem " + pontos + " Pontos!");
+</script>
