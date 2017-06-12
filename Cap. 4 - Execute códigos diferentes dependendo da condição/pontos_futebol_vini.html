@@ -15,33 +15,20 @@
     }
 
     // OPÇÃO 1
-    // 1 - pega os dados de um time
-    // 2 - exibe na tela
-    // 3 - pega os dados do outro time
-    // 4 - exibe na tela
-    // 5 - faz o calculo e mostra qual time está melhor.
 
     // 1
     function meuTime() {
         var v1 = prompt("Quantos jogos o CDC Futebol Clube venceu?");
         var e1 = prompt("Quantos jogos o CDC Futebol Clube empatou?");
-
-
         var pontos = (calculaPontos(v1, e1));
-
         document.getElementById('meutime').innerHTML = "Nosso time tem " + pontos + " Pontos!";
-
     }
 
     function adversario() {
-
         var v2 = prompt("Quantos jogos o outro time venceu?");
         var e2 = prompt("Quantos jogos o outro time empatou?");
-
         var pontosAdversario = (calculaPontos(v2, e2));
-
         document.getElementById('adversario').innerHTML = "O time adversário tem " + pontosAdversario + " Pontos!";
-
     }
 
 
