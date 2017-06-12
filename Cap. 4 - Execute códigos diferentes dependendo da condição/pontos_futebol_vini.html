@@ -9,14 +9,10 @@
         pulaLinha();
     };
 
-    //função de calcula os pontos
     function calculaPontos(vitorias, empates) {
         return (parseInt(vitorias) * 3) + parseInt(empates);
     }
 
-    // OPÇÃO 1
-
-    // 1
     function meuTime() {
         var v1 = prompt("Quantos jogos o CDC Futebol Clube venceu?");
         var e1 = prompt("Quantos jogos o CDC Futebol Clube empatou?");
@@ -30,29 +26,6 @@
         var pontosAdversario = (calculaPontos(v2, e2));
         document.getElementById('adversario').innerHTML = "O time adversário tem " + pontosAdversario + " Pontos!";
     }
-
-
-    // var vitorias = prompt("Quantos jogos o time adversário venceu?");
-    // var empates = prompt("Quantos jogos o time adversário empatou?");
-
-
-    // //parseInt(); para 'converter' string em número.
-    // var pontos = (vitorias * 3) + parseInt(empates);
-    // var pontosAdversario = (vitorias * 3) + parseInt(empates);
-
-    // mostra("Nosso time tem " + pontos + " Pontos!");
-
-    // // Em 'if' não se usa ponto e vírgula (;)
-
-    // if (pontos > 28) {
-    //     mostra("Nosso time está indo MELHOR que o Livros Velhos!");
-    // }
-    // if (pontos < 28) {
-    //     mostra("Nosso time está indo PIOR que o Livros Velhos!");
-    // }
-    // if (pontos == 28) {
-    //     mostra("Nosso time está EMPATADO com o Livros Velhos!");
-    // }
 
 </script>
 
