@@ -1,25 +1,28 @@
 <meta charset="UTF-8">
 <script>
-    var pulaLinha = function () {
+    function pulaLinha() {
         document.write("<br>");
     };
-    var mostra = function (frase) {
+    function mostra (frase) {
         document.write(frase);
         pulaLinha();
     };
 
-    function calculaPontos(vitorias, empates) {
-        return (parseInt(vitorias) * 3) + parseInt(empates);
+    function calculaPontos(vitorias, empates, derrotas) {
+        return (parseInt(vitorias) * 3) + parseInt(empates) - parseInt(derrotas);
     };
 
     var v1 = prompt("Quantos jogos o CDC Futebol Clube venceu?");
     var e1 = prompt("Quantos jogos o CDC Futebol Clube empatou?");
+    var d1 = prompt("Quantos jogos o CDC Futebol Clube perdeu?");
     var v2 = prompt("Quantos jogos o Livros Velhos venceu?");
     var e2 = prompt("Quantos jogos o Livros Velhos empatou?");
+    var d2 = prompt("Quantos jogos o CDC Futebol Clube perdeu?");
 
-    var pontos = (calculaPontos(v1, e1));
-    var pontosAdversario = (calculaPontos(v2, e2));
+    var pontos = (calculaPontos(v1, e1, d1));
+    var pontosAdversario = (calculaPontos(v2, e2, d2));
 
+    mostra(pontos);
     if (pontos > pontosAdversario) {
         mostra("Nosso time está indo MELHOR que o Livros Velhos!");
     }
