@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+<script>
+    var pulaLinha = function () {
+        document.write("<br>");
+    };
+
+    var mostra = function (frase) {
+        document.write(frase);
+        pulaLinha();
+    };
+
+    function sorteia(n) {
+        return Math.round(Math.random() * n);
+    }
+
+    var numeroPensado = sorteia(10);
+
+    var chute = prompt("Já pensei. Qual número você acha que é?");
+
+    if (chute == numeroPensado) {
+        mostra("Uau! Você acertou, pois eu pensei no " + numeroPensado + "! (▀̿Ĺ̯▀̿ ̿)");
+    } else {
+        if (chute > numeroPensado) {
+            mostra("Você errou! o seu chute é maior que o pensado. ¯\_(ツ)_/¯");
+        }
+        else {
+            mostra("você errou! o seu chute é menor que o pensado. ¯\_(ツ)_/¯");
+
+        }
+
+    }
+
+</script>
