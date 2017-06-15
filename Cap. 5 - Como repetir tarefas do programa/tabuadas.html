@@ -1,0 +1,15 @@
+<meta charset="UTF-8">
+<script>
+    var mostra = function (frase) {
+        document.write(frase + "<br>");
+    };
+
+    var multiplicador = 1;
+    var numero = prompt("Deseja saber a tabuada de qual número?");
+    var limite = prompt("Até onde?")
+    while (multiplicador <= limite) {
+        mostra(numero + " vezes " + multiplicador + " é igual a " + numero * multiplicador);
+        multiplicador = multiplicador + 1;
+    }
+
+</script>
