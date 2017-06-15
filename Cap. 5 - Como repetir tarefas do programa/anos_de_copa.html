@@ -1,0 +1,17 @@
+<meta charset="UTF-8">
+<script>
+    function mostra(frase) {
+        document.write(frase + "<br>");
+    };
+
+    var anoDeCopa = prompt("Informe o ano inicial")
+    var anoLimite = prompt("Até que ano deseja saber?");
+
+    while (anoDeCopa <= anoLimite) {
+        mostra(anoDeCopa + " tem copa!");
+        anoDeCopa = parseInt(anoDeCopa) + 4;
+        mostra(anoDeCopa + " esse é o valor após a soma!");
+    }
+    mostra("Ufa! Esses foram os anos de copa até " + anoLimite);
+
+</script>
