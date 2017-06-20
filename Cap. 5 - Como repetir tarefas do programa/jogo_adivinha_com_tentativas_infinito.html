@@ -3,11 +3,12 @@
     var numeroPensado = Math.round(Math.random() * 5);
 
     var numeroDaTentativa = 1;
-    while (numeroDaTentativa <= 3 && chute != numeroPensado) {
+    while (true){
         var chute = prompt("Qual número você acha que é?");
 
         if (chute == numeroPensado) {
             alert("Parabéns, você acertou!");
+            break;
         } else {
             if (chute < numeroPensado) {
                 alert("Você errou. Seu chute é menor que o número pensado.");
@@ -17,5 +18,5 @@
         }
         numeroDaTentativa++;
     }
-    alert("Você jogou " + (numeroDaTentativa - 1) + " vezes.");
+    alert("Você jogou " + numeroDaTentativa + " vezes.");
 </script>
