@@ -1,0 +1,38 @@
+<meta charset="UTF-8">
+<script>
+    //Desafio 1
+    var tamanho = prompt("Qual deve ser o tamanho do quadrado?");
+
+    for(var linha = 0; linha < tamanho; linha++) {
+        for(var coluna = 0; coluna < tamanho; coluna++) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+
+    //Desafio 2
+    for (var linha = 0; linha <= 10; linha++) {
+        for (var coluna = 0; coluna < linha ; coluna++) {
+            document.write("*");
+
+        }
+        document.write("<br>");
+    }
+
+    //Desafio 3
+    var altura = parseInt(prompt("Quandos asteriscos no V de Vingança?"));
+    var base = altura * 2 - 1;
+
+    for (var j = 1; j <= altura; j++) { //repete a linha 
+        for (var i = 1; i <= base; i++) { //cria 1 linha -> num colunas == base 
+            if (i == j || i + j == base + 1) {
+                document.write("*");
+            }
+            else {
+                document.write("_");
+            }
+        }
+        document.write("<br>");
+    }
+
+</script>
