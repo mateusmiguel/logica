@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Advinhação!</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <h1>Advinhação!</h1>
+    <form>
+        <input type="text" id="numero" />
+        <input type="submit" id="adivinhar" value="Compare com o meu segredo!" />
+    </form>
+
+    <script>
+        var caixaDoNumero = document.getElementById("numero");
+        function botaoClicado() {
+            alert(caixaDoNumero.value);
+        }
+
+        var botaoAdivinhar = document.getElementById("adivinhar");
+        botaoAdivinhar.onclick = botaoClicado;
+        
+    </script>
+</body>
+
+</html>
