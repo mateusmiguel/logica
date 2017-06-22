@@ -1,0 +1,56 @@
+<meta charset="UTF-8">
+<script>
+    //Variáveis
+    var numerosSorteados = [];
+    var numerosEscolhidos = [];
+    var limite = 6;
+    var numeroJaSorteado = false;
+
+    //Funções
+    function sorteiaNumero() {
+        return Math.round(Math.random() * 60);
+    }
+
+    //sorteia os números 
+    while (numerosSorteados.length < limite) {
+
+        //sorteia um número de 0 a 60
+        var numeroSorteado = sorteiaNumero();
+        var numeroJaSorteado = false;
+
+        for (var x = 0; x < numerosSorteados.length; x++) {
+            if (numerosSorteados[x] == numeroSorteado) {
+                numeroJaSorteado = true;
+            }
+        }
+        //verifica se o número já existe na array
+        if (numeroJaSorteado) {
+            console.log("Numero ja sorteado");
+        }
+        else {
+            // grava o número se ele não existir ainda
+            numerosSorteados.push(numeroSorteado);
+        }
+    }
+
+    //Pergunta os números ao jogador
+    while (numerosEscolhidos.length < limite) {
+        var chute = prompt("Qual seu chute?");
+        
+        for (var x = 0; x < numerosEscolhidos.length; x++) {
+            if (numerosEscolhidos[x] == chute) {
+                numeroJaSorteado = true;
+            }
+        }
+
+        //verifica se o número já existe na array
+        if (numeroJaSorteado) {
+            console.log("número já escolhido.");
+        }
+        else {
+            // grava o número se ele não existir ainda
+            numerosEscolhidos.push(chute);
+        }
+    };
+
+</script>
