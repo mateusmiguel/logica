@@ -4,9 +4,9 @@
     var numerosSorteados = [];
     var numerosEscolhidos = [];
     var limite = 6;
-    var numeroJaSorteado = false;
 
-    //Funções
+
+    // //Funções
     function sorteiaNumero() {
         return Math.round(Math.random() * 60);
     }
@@ -36,6 +36,7 @@
     //Pergunta os números ao jogador
     while (numerosEscolhidos.length < limite) {
         var chute = prompt("Qual seu chute?");
+        var numeroJaSorteado = false;
         
         for (var x = 0; x < numerosEscolhidos.length; x++) {
             if (numerosEscolhidos[x] == chute) {
