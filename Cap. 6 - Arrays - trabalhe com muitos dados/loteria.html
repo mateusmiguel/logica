@@ -1,35 +1,21 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<meta charset="UTF-8">
+<input type="text" id="numero" />
+<input type="submit" id="adivinhar" value="Compare com o meu segredo!" />
 
-<head>
-    <title>Advinhação!</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-
-<body>
-    <h1>Loteria!</h1>
-
-    <input type="text" id="numero" />
-    <input type="submit" id="adivinhar" value="Compare com o meu segredo!" />
-
-
-    <script>
-        var segredo = Math.round(Math.random() * 100);
-        var caixaDoNumero = document.getElementById("numero");
-
-        function botaoClicado() {
-            if (segredo == caixaDoNumero.value) {
-                alert("Parabéns! Você acertou o número secreto.");
+<script>
+    var segredos = [16, 34, 37, 42, 50, 58];
+    var caixaDoNumero = document.getElementById("numero");
+    function botaoClicado() {
+        for (var i = 0; i < segredos.length; i = i + 1) {
+            if (segredos[i] == caixaDoNumero.value) {
+                alert("Parabéns, você acertou o " + (i + 1) + "º numero");
+                return;
             }
-            else {
-                alert("Infelizmente você errou!");
-            };
-            caixaDoNumero.value = "";
         }
+        alert("Infelizmente você errou!");
+    };
 
-        var botaoAdivinhar = document.getElementById("adivinhar");
-        botaoAdivinhar.onclick = botaoClicado;
-    </script>
-</body>
+    var botaoAdivinhar = document.getElementById("adivinhar");
+    botaoAdivinhar.onclick = botaoClicado;
 
-</html>
+</script>
