@@ -4,6 +4,7 @@
     var numerosSorteados = [];
     var numerosEscolhidos = [];
     var limite = 6;
+    var acertos = 0;
 
 
     // //Funções
@@ -11,7 +12,7 @@
         return Math.round(Math.random() * 60);
     }
 
-    //sorteia os números 
+    // 1 - sorteia os números 
     while (numerosSorteados.length < limite) {
 
         //sorteia um número de 0 a 60
@@ -33,11 +34,11 @@
         }
     }
 
-    //Pergunta os números ao jogador
+    // 2 - Pergunta os números ao jogador
     while (numerosEscolhidos.length < limite) {
         var chute = prompt("Qual seu chute?");
         var numeroJaSorteado = false;
-        
+
         for (var x = 0; x < numerosEscolhidos.length; x++) {
             if (numerosEscolhidos[x] == chute) {
                 numeroJaSorteado = true;
@@ -53,5 +54,18 @@
             numerosEscolhidos.push(chute);
         }
     };
+
+    //3 - Compara os números
+    //For passando por todos os números sorteados
+    for (var c = 0; c < numerosSorteados.length; c = c + 1) {
+        //Pega um número sorteado e passa por todos os números escolhidos
+        for (var e = 0; e < numerosEscolhidos.length; e = e + 1) {
+            if (numerosEscolhidos[e] == numerosSorteados[c]) {
+                var acertos = acertos + 1;
+            }
+        }
+    }
+    //Exibe os resultados na tela
+    document.write("Acertos: " + acertos + ".<hr> Os números sorteados foram: <strong>" + numerosSorteados + "</strong>.")
 
 </script>
